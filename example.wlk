@@ -54,4 +54,9 @@ object gonzen {
 	method edad(){
 		return edad
 	}
+}
+object rochensen {
+	method dejarPasar(unaPersona){	
+	return unaPersona.edad() > 21
+	}
 }	
