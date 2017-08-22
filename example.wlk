@@ -104,3 +104,14 @@ object tommyMunoz {
 		unaPersona.bailar(80,0)
 }
 }
+object panoramaBar {
+	method bailaConDixon(unaPersona){
+		dixon.hacerBailarA(unaPersona)
+	}
+	method bailaConDettmann(unaPersona){
+		marcelDettmann.hacerBailarA(unaPersona)
+	}
+	method bailaConMunoz(unaPersona){
+		tommyMunoz.hacerBailarA(unaPersona)
+	}
+}
