@@ -99,3 +99,8 @@ object marcelDettmann {
 		unaPersona.bailar(unaPersona.energia(),1000)
 }
 }
+object tommyMunoz {
+	method hacerBailarA (unaPersona) {
+		unaPersona.bailar(80,0)
+}
+}
