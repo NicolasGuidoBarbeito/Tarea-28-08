@@ -94,3 +94,8 @@ object dixon {
 		unaPersona.bailar(60,120)
 }
 }
+object marcelDettmann {
+	method hacerBailarA (unaPersona) {
+		unaPersona.bailar(unaPersona.energia(),1000)
+}
+}
