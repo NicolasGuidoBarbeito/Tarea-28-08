@@ -88,3 +88,9 @@ object mainRoom {
 		unaPersona.bailar(40,30)
 	}
 }
+
+object dixon {
+	method hacerBailarA (unaPersona) {
+		unaPersona.bailar(60,120)
+}
+}
