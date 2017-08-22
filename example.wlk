@@ -65,4 +65,8 @@ object rodrigsen {
 		return unaPersona.remera() == "negra"
 	}
 }
-	
+object gushtavotruccensen {
+	method dejarPasar(unaPersona){
+		return false
+	}
+}	
