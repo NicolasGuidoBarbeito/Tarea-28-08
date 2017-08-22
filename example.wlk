@@ -59,4 +59,10 @@ object rochensen {
 	method dejarPasar(unaPersona){	
 	return unaPersona.edad() > 21
 	}
-}	
+}
+object rodrigsen {
+	method dejarPasar(unaPersona){
+		return unaPersona.remera() == "negra"
+	}
+}
+	
