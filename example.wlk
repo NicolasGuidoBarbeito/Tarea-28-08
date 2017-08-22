@@ -36,3 +36,22 @@ object bianker {
 		return edad
 	}
 }	
+object gonzen {
+	var energia = 90
+	var diversion = 15
+	const remera = "negra"
+	const edad = 33
+	
+		method energia(){
+		return energia
+	}
+	method diversion(){
+		return diversion
+	}
+	method remera(){
+		return remera
+	}
+	method edad(){
+		return edad
+	}
+}	
