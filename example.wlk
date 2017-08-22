@@ -82,3 +82,9 @@ object gushtavotruccensen {
 		return false
 	}
 }	
+
+object mainRoom {
+	method hacerBailarA (unaPersona) {
+		unaPersona.bailar(40,30)
+	}
+}
