@@ -16,6 +16,10 @@ object vonLukaz {
 	method edad(){
 		return edad
 	}
+	method bailar(cantidadDeEnergiaGastada, cantidadDeDiversionAumentada){
+		energia = energia - cantidadDeEnergiaGastada
+		diversion = diversion + cantidadDeDiversionAumentada
+	}
 }
 object bianker {
 	var energia = 140
@@ -35,6 +39,10 @@ object bianker {
 	method edad(){
 		return edad
 	}
+	method bailar(cantidadDeEnergiaGastada, cantidadDeDiversionAumentada){
+		energia = energia - cantidadDeEnergiaGastada
+		diversion = diversion + cantidadDeDiversionAumentada
+	}
 }	
 object gonzen {
 	var energia = 90
@@ -53,6 +61,10 @@ object gonzen {
 	}
 	method edad(){
 		return edad
+	}
+	method bailar(cantidadDeEnergiaGastada, cantidadDeDiversionAumentada){
+		energia = energia - cantidadDeEnergiaGastada
+		diversion = diversion + cantidadDeDiversionAumentada
 	}
 }
 object rochensen {
