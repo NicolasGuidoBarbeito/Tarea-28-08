@@ -1,0 +1,167 @@
+import Djs.*
+
+test "von Lukaz comienza con 150 de energia" {
+	assert.equals(150,vonLukaz.energia())
+}
+
+test "von Lukaz comienza con 70 de diversion" {
+	assert.equals(70,vonLukaz.diversion())
+}
+
+test "von Lukaz tiene remera blanca"{
+	assert.equals("blanca",vonLukaz.remera())
+}
+
+test "von Lukaz tiene 17 anios de edad"{
+	assert.equals(17,vonLukaz.edad())
+}
+test "bianker comienza con 140 de energia" {
+	assert.equals(140,bianker.energia())
+}
+
+test "bianker comienza con 80 de diversion" {
+	assert.equals(80,bianker.diversion())
+}
+
+test "bianker tiene remera negra"{
+	assert.equals("negra",bianker.remera())
+}
+
+test "bianker tiene 22 anios de edad"{
+	assert.equals(22,bianker.edad())
+}
+test "gonzen comienza con 90 de energia" {
+	assert.equals(90,gonzen.energia())
+}
+
+test "gonzen comienza con 15 de diversion" {
+	assert.equals(15,gonzen.diversion())
+}
+
+test "gonzen tiene remera negra"{
+	assert.equals("negra",gonzen.remera())
+}
+
+test "gonzen tiene 33 anios de edad"{
+	assert.equals(33,gonzen.edad())
+}
+test "von Lukaz tiene 17 años, por lo tanto es menor de edad"{
+	assert.that(!vonLukaz.esMayorDeEdad())
+}
+test "bianker tiene 22 años, por lo tanto es mayor de edad"{
+	assert.that(bianker.esMayorDeEdad())
+}
+test "gonzen tiene 33 años, por lo tanto es mayor de edad"{
+	assert.that(gonzen.esMayorDeEdad())
+}
+test "El patovica rochensen no deja pasar a von Lukaz porque es menor de edad"{
+	assert.that(!rochensen.dejaPasarA(vonLukaz))
+}
+test "El patovica rochensen deja pasar a gonzen porque es mayor de edad"{
+	assert.that(rochensen.dejaPasarA(gonzen))
+}
+test "El patovica rodrigsen no deja pasar a von Lukaz porque tiene remera blanca"{
+	assert.that(!rodrigsen.dejaPasarA(vonLukaz))
+}
+test "El patovica rodrigsen deja pasar a bianker porque tiene remera negra"{
+	assert.that(rodrigsen.dejaPasarA(bianker))
+}
+test "El patovica gushtavotruccensen no deja pasar a ninguno de los tres. (Probamos con bianker)"{
+	assert.that(!gushtavotruccensen.dejaPasarA(bianker))
+}
+test "von Lukaz baila en la pista mainRoom quedando con 110 de energia"{
+	mainRoom.hacerBailarA(vonLukaz)
+	assert.equals(110,vonLukaz.energia())
+}
+test "von Lukaz baila en la pista mainRoom quedando con 100 de diversion"{
+	mainRoom.hacerBailarA(vonLukaz)
+	assert.equals(100,vonLukaz.diversion())
+}
+test "bianker baila en la pista mainRoom quedando con 100 de energia"{
+	mainRoom.hacerBailarA(bianker)
+	assert.equals(100,bianker.energia())
+}
+test "bianker baila en la pista mainRoom quedando con 110 de diversion"{
+	mainRoom.hacerBailarA(bianker)
+	assert.equals(110,bianker.diversion())
+}
+test "gonzen baila en la pista mainRoom quedando con 50 de energia"{
+	mainRoom.hacerBailarA(gonzen)
+	assert.equals(50,gonzen.energia())
+}
+test "gonzen baila en la pista mainRoom quedando con 45 de diversion"{
+	mainRoom.hacerBailarA(gonzen)
+	assert.equals(45,gonzen.diversion())
+}
+test "von Lukaz baila con la musica del Dj dixon quedando con 90 de energia"{
+	dixon.haceBailarA(vonLukaz)
+	assert.equals(90,vonLukaz.energia())
+}
+test "von Lukaz baila con la musica del Dj dixon quedando con 190 de diversion"{
+	dixon.haceBailarA(vonLukaz)
+	assert.equals(190,vonLukaz.diversion())
+}
+test "bianker baila con la musica del Dj dixon quedando con 80 de energia"{
+	dixon.haceBailarA(bianker)
+	assert.equals(80,bianker.energia())
+}
+test "bianker baila con la musica del Dj dixon quedando con 200 de diversion"{
+	dixon.haceBailarA(bianker)
+	assert.equals(200,bianker.diversion())
+}
+test "gonzen baila con la musica del Dj dixon quedando con 30 de energia"{
+	dixon.haceBailarA(gonzen)
+	assert.equals(30,gonzen.energia())
+}
+test "gonzen baila con la musica del Dj dixon quedando con 135 de diversion"{
+	dixon.haceBailarA(gonzen)
+	assert.equals(135,gonzen.diversion())
+}
+test "von Lukaz baila con la musica del Dj marcelDettmann quedando con 0 de energia"{
+	marcelDettmann.haceBailarA(vonLukaz)
+	assert.equals(0,vonLukaz.energia())
+}
+test "von Lukaz baila con la musica del Dj marcelDettmann quedando con 1070 de diversion"{
+	marcelDettmann.haceBailarA(vonLukaz)
+	assert.equals(1070,vonLukaz.diversion())
+}
+test "bianker baila con la musica del Dj marcelDettmann quedando con 0 de energia"{
+	marcelDettmann.haceBailarA(bianker)
+	assert.equals(0,bianker.energia())
+}
+test "bianker baila con la musica del Dj marcelDettmann quedando con 1080 de diversion"{
+	marcelDettmann.haceBailarA(bianker)
+	assert.equals(1080,bianker.diversion())
+}
+test "gonzen baila con la musica del Dj marcelDettmann quedando con 0 de energia"{
+	marcelDettmann.haceBailarA(gonzen)
+	assert.equals(0,gonzen.energia())
+}
+test "gonzen baila con la musica del Dj marcelDettmann quedando con 135 de diversion"{
+	marcelDettmann.haceBailarA(gonzen)
+	assert.equals(1015,gonzen.diversion())
+}
+test "von Lukaz baila con la musica del Dj tommyMunoz quedando con 70 de energia"{
+	tommyMunoz.haceBailarA(vonLukaz)
+	assert.equals(70,vonLukaz.energia())
+}
+test "von Lukaz baila con la musica del Dj tommyMunoz quedando con 70 de diversion"{
+	tommyMunoz.haceBailarA(vonLukaz)
+	assert.equals(70,vonLukaz.diversion())
+}
+test "bianker baila con la musica del Dj tommyMunoz quedando con 60 de energia"{
+	tommyMunoz.haceBailarA(bianker)
+	assert.equals(60,bianker.energia())
+}
+test "bianker baila con la musica del Dj tommyMunoz quedando con 80 de diversion"{
+	tommyMunoz.haceBailarA(bianker)
+	assert.equals(80,bianker.diversion())
+}
+test "gonzen baila con la musica del Dj tommyMunoz quedando con 10 de energia"{
+	tommyMunoz.haceBailarA(gonzen)
+	assert.equals(10,gonzen.energia())
+}
+test "gonzen baila con la musica del Dj tommyMunoz quedando con 15 de diversion"{
+	tommyMunoz.haceBailarA(gonzen)
+	assert.equals(15,gonzen.diversion())
+}
